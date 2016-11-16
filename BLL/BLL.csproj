@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{518C408D-889C-437E-BC03-8BA66216991E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BLL</RootNamespace>
+    <AssemblyName>BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Exceptions\AppErrorException.cs" />
+    <Compile Include="Classes\Exceptions\AppWarningException.cs" />
+    <Compile Include="Classes\Misc\Misc.cs" />
+    <Compile Include="Classes\SchoolQPaper\Document\Document_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_Agent_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_Division_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_Document_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_Province_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_School_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_TrainStation_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\MST_Zone_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\PaperOrder01\PaperOrder01_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\PaperOrder02\PaperOrder02_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\Receipt\Receipt_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_PaperOrder01_D_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_PaperOrder01_H_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_PaperOrder02_D_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_PaperOrder02_H_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receipt_CHQ_Info_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receipt_D_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receipt_H_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receipt_MO_Info_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receipt_PayType_Class.cs" />
+    <Compile Include="Classes\SchoolQPaper\TRN_Receivable_Class.cs" />
+    <Compile Include="Data\Grid_DS\DS_PaperOrder01.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PaperOrder01.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Grid_DS\DS_PaperOrder02.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_PaperOrder02.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Grid_DS\DS_Receipt.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_Receipt.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Agent.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_DeliveryMethod.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Division.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Document.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Grade.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_GradSubj.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_PayType.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Province.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_School.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Subject.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_TrainStation.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\MST_Zone.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\SchoolQPaper_entities.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_PaperOrder01_D.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_PaperOrder01_H.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_PaperOrder02_D.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_PaperOrder02_H.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receipt_CHQ_Info.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receipt_D.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receipt_H.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receipt_MO_Info.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receipt_PayType.cs" />
+    <Compile Include="Data\SchoolQPaper\SchoolQPaper_entities\TRN_Receivable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Data\Grid_DS\DS_PaperOrder01.xsc">
+      <DependentUpon>DS_PaperOrder01.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Grid_DS\DS_PaperOrder01.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PaperOrder01.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Grid_DS\DS_PaperOrder01.xss">
+      <DependentUpon>DS_PaperOrder01.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Grid_DS\DS_PaperOrder02.xsc">
+      <DependentUpon>DS_PaperOrder02.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Grid_DS\DS_PaperOrder02.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_PaperOrder02.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Grid_DS\DS_PaperOrder02.xss">
+      <DependentUpon>DS_PaperOrder02.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Grid_DS\DS_Receipt.xsc">
+      <DependentUpon>DS_Receipt.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Grid_DS\DS_Receipt.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_Receipt.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Grid_DS\DS_Receipt.xss">
+      <DependentUpon>DS_Receipt.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
